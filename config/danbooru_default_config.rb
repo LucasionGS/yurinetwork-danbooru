@@ -63,7 +63,6 @@ module Danbooru
     #
     # You can set this to "localhost" if your site doesn't have a public domain name.
     def hostname
-      # Socket.gethostname
       "yurinetwork.com"
     end
 

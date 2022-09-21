@@ -22,7 +22,8 @@ version: "3.4"
 services:
   danbooru:
     user: root
-    image: ghcr.io/danbooru/danbooru:production
+    # image: ghcr.io/danbooru/danbooru:production
+    build: .
     ports:
       - "9500:3000"
     environment:
@@ -49,7 +50,7 @@ services:
       - DATABASE_URL=postgresql://danbooru@postgres/danbooru
       - DANBOORU_REDIS_URL=redis://redis:6379
       - DANBOORU_IQDB_URL=http://iqdb:5588
-      - DANBOORU_CANONICAL_URL=http://localhost
+      - DANBOORU_CANONICAL_URL=http://192.168.0.31
     depends_on:
       - danbooru
     volumes:
@@ -65,7 +66,7 @@ services:
       - DATABASE_URL=postgresql://danbooru@postgres/danbooru
       - DANBOORU_REDIS_URL=redis://redis:6379
       - DANBOORU_IQDB_URL=http://iqdb:5588
-      - DANBOORU_CANONICAL_URL=http://localhost
+      - DANBOORU_CANONICAL_URL=http://192.168.0.31
     depends_on:
       - danbooru
     volumes:

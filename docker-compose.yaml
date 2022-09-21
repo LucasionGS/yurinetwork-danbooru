@@ -32,7 +32,7 @@ services:
       - DATABASE_URL=postgresql://danbooru@postgres/danbooru
       - DANBOORU_REDIS_URL=redis://redis:6379
       - DANBOORU_IQDB_URL=http://iqdb:5588
-      - DANBOORU_CANONICAL_URL=http://localhost:3000
+      - DANBOORU_CANONICAL_URL=http://192.168.0.31:3000
     volumes:
       - "danbooru-images:/danbooru/public/data"
     tmpfs:

@@ -45,14 +45,14 @@ module Danbooru
     # The name of this Danbooru.
     def app_name
       if CurrentUser.safe_mode?
-        "Safebooru"
+        "Safe Yuri Network"
       else
-        "Danbooru"
+        "Yuri Network"
       end
     end
 
     def canonical_app_name
-      "Danbooru"
+      "Yuri Network"
     end
 
     # The public domain name of your site, e.g. "danbooru.donmai.us". If your
@@ -63,12 +63,13 @@ module Danbooru
     #
     # You can set this to "localhost" if your site doesn't have a public domain name.
     def hostname
-      Socket.gethostname
+      # Socket.gethostname
+      "yurinetwork.com"
     end
 
     # A list of alternate hostnames where safe mode will automatically be enabled.
     def safe_mode_hostnames
-      ["safebooru.donmai.us"]
+      ["safe.yurinetwork.com"]
     end
 
     # The URL of your site, e.g. https://danbooru.donmai.us.
@@ -96,7 +97,7 @@ module Danbooru
     #
     # Run `rake db:seed` to create this account if it doesn't already exist in your install.
     def system_user
-      "DanbooruBot"
+      "YuriBot"
     end
 
     # The name of the cookie that stores the current user's login session.
@@ -115,7 +116,7 @@ module Danbooru
     end
 
     def source_code_url
-      "https://github.com/danbooru/danbooru"
+      "https://github.com/LucasionGS/yurinetwork-danbooru"
     end
 
     def issues_url
@@ -132,7 +133,7 @@ module Danbooru
     # Disable this if you're running a public booru and you don't want email
     # verification for new accounts.
     def new_user_verification?
-      true
+      false
     end
 
     # An array of regexes containing disallowed usernames.

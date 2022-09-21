@@ -24,7 +24,7 @@ services:
     user: root
     image: ghcr.io/danbooru/danbooru:production
     ports:
-      - "3000:3000"
+      - "9500:3000"
     environment:
       - RAILS_ENV=production
       - RAILS_SERVE_STATIC_FILES=true
